@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>写字</title>
+  
+  <style>
+    canvas {
+      /* border: 1px solid red; */
+      margin: 40px auto;
+      display: block;
+      /* margin-top: 1000px; */
+    }
+    .color-container {
+      margin: 0 auto;
+      width: 500px;
+    }
+    span {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid #ddd;
+    }
+    .yellow {
+      background-color: yellow;
+    }
+    .red {
+      background-color: red;
+    }
+    .black {
+      background-color: black;
+    }
+    .blue {
+      background-color: blue;
+    }
+    .green {
+      background-color: green;
+    }
+    span:hover {
+      border-color: #369;
+    }
+    span.selected {
+      border-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <button onclick="erase()">橡皮擦</button>
+  
+  <div class="color-container">
+    <span class="yellow" onClick="setStrokeColor('yellow', event)"></span>
+    <span class="black selected" onClick="setStrokeColor('black', event)"></span>
+    <span class="red" onClick="setStrokeColor('red', event)"></span>
+    <span class="green" onClick="setStrokeColor('green', event)"></span>
+    <span class="blue" onClick="setStrokeColor('blue', event)"></span>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
